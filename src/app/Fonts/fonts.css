@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "UberMove";
+  src: url("UberMoveMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("PlusJakartaSans-Regular.ttf") format("truetype");
+}
