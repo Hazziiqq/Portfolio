@@ -7,3 +7,11 @@
   font-family: "PlusJakartaSans";
   src: url("PlusJakartaSans-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: 'Hack';
+  src: url('/fonts/Hack-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
