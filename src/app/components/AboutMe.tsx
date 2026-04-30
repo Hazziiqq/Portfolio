@@ -1,42 +1,66 @@
-import React from 'react'
-import { Box, Typography } from '@mui/material'
-import Image from 'next/image'
+import { Box, Typography } from "@mui/material";
+import Image from "next/image";
+
+const mono = { fontFamily: "'Hack', monospace" };
 
 const AboutMe = () => {
   return (
-    <Box sx={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    }}>
-      <Box sx={{ maxWidth: '60%' }}>
-        <Typography variant="h5" sx={{ fontFamily: 'Hack, monospace', fontWeight: 'bold' }}>
-          Hey there! My name is <strong>Haziq Saleem</strong>. I am a Computer Science student at <strong>Institute of Management Sciences Peshawar</strong>.
+    <Box
+      className="about-container section-content"
+      sx={{
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "space-between",
+        mt: 2,
+        gap: 3,
+      }}
+    >
+      <Box className="about-text" sx={{ maxWidth: "65%" }}>
+        <Typography
+          variant="h6"
+          sx={{ ...mono, fontWeight: "bold", color: "#64b5f6", mb: 1 }}
+        >
+          ~/AboutMe
         </Typography>
-        <Typography sx={{ fontFamily: 'Hack, monospace', mt: 2 }}>
-          Currently studying in my <strong>6th semester</strong>, I specialize in building user-friendly interfaces using <strong>HTML</strong>, <strong>CSS</strong>, <strong>React</strong>, and <strong>Next.js</strong>. 
-          I am constantly exploring new tools and technologies to improve my craft and deliver seamless digital experiences.
+        <Typography sx={{ ...mono, fontSize: "0.9rem", lineHeight: 1.7 }}>
+          Hey there! I&apos;m <strong>Haziq Saleem</strong>, a Computer Science <strong>Graduate </strong>
+          from{" "}
+          <strong>Institute of Management Sciences, Peshawar</strong>, I spend most of my time building
+          things for the web.
         </Typography>
-
-        <Typography sx={{ fontFamily: 'Hack, monospace', mt: 5 }}>
-          Hope you enjoy visiting my Portfolio. Feel free to scroll through the directories and learn more about me :)
+        <Typography
+          sx={{ ...mono, fontSize: "0.9rem", mt: 2, lineHeight: 1.7 }}
+        >
+          I specialize in frontend development — working with{" "}
+          <span style={{ color: "#61dafb" }}>React</span>,{" "}
+          <span style={{ color: "#ffffff" }}>Next.js</span>,{" "}
+          <span style={{ color: "#38bdf8" }}>Tailwind CSS</span>, and{" "}
+          <span style={{ color: "#7c4dff" }}>Material UI</span>. I&apos;m always
+          picking up new tools and trying to get better at what I do.
+        </Typography>
+        <Typography
+          sx={{ ...mono, fontSize: "0.85rem", mt: 2, color: "#90a4ae" }}
+        >
+          When I&apos;m not coding, you&apos;ll find me exploring new tech,
+          watching tutorials, or working on side projects to sharpen my skills.
         </Typography>
       </Box>
-      
-      <Box>
+
+      <Box className="about-image" sx={{ flexShrink: 0, mr: { xs: 0, md: 4 } }}>
         <Image
-          alt="Haziq's Profile Picture"
+          alt="Haziq Saleem"
           src="/pfp1.jpg"
-          width={300}
-          height={300}
-          style={{ 
-            borderRadius: '10px',
-            marginRight: 50
-           }} 
+          width={220}
+          height={220}
+          style={{
+            borderRadius: "8px",
+            border: "2px solid rgba(100, 181, 246, 0.3)",
+            objectFit: "cover",
+          }}
         />
       </Box>
     </Box>
   );
-}
+};
 
 export default AboutMe;
